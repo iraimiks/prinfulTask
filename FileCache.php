@@ -5,19 +5,20 @@ class FileCache implements CacheInterface {
     function __construct() {
 
     }
-    function fileContentsToJson($dataHer){
-      $string = file_get_contents("jsonFile/$dataHer");
-      return  json_decode($string,true);
+    function fileContentsToJson(string $key, $contents){
+        $jsonFromFile = json_decode($contents,true);
+
+        file_put_contents("json/$key",$jsonFromFile);
     }
 
     public function set(string $key, $values, int $duration)
     {
-
+        fileContentsToJson($key,$values);
     }
 
-    public function get()
+    public function get(string $key)
     {
-        // TODO: Implement get() method.
+        file_get_contents("jsonData/$key");
     }
 
 
