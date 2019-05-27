@@ -1,0 +1,15 @@
+{
+  "recipient": {
+    "address1": "11025 Westlake Dr,",
+    "city": "Charlotte",
+    "country_code": "US",
+    "state_code": "NC",
+    "zip": 28273
+  },
+  "items": [
+    {
+      "quantity": 2,
+      "variant_id": 7679
+    }
+  ]
+}
